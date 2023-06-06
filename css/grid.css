@@ -13,21 +13,17 @@ box-sizing: inherit;
     display: none;
 }
 
-.box {
-    background-color: powderblue;
-    color: rgb(27, 27, 27);
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom:10px;
-}
-
 /*mobile*/
 h1 {
     text-align: center;
     font-size: 45px;
-    margin: 25px 0px;
+    margin: 25px 0 25px 15px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*tablet*/
@@ -35,7 +31,7 @@ h1 {
     h1 {
         text-align: center;
         font-size: 65px;
-        margin: 25px 0px;
+        margin: 25px 0 25px 15px;
     }
 }
 
@@ -45,7 +41,7 @@ h1 {
     h1 {
         text-align: center;
         font-size: 75px;
-        margin: 25px 0px;
+        margin: 25px 0 25px 15px;
     }
 }
 
@@ -54,7 +50,7 @@ h1 {
     h1 {
         text-align: center;
         font-size: 75px;
-        margin: 25px 0px;
+        margin: 25px 0 25px 15px;
     }
 
 }
