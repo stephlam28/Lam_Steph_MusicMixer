@@ -1,0 +1,10 @@
+108
+https://martinwecke.de/108/?ref=producthunt
+
+ocean
+https://www.oceanwaves.io/currents/LG2J3oyRuHPhtGaGY
+
+no sample audio files as of yet, want something similar to 108/ocean with just snares and claps to keep simplicity
+
+site would have 108 circle on left side but drag and drop function on right referencing ocean rather than keybinds (maybe viceversa for easier use);
+it'd be dragging and dropping beats into circle that turn into simple shapes like 108.
