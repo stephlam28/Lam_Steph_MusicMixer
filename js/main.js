@@ -1,9 +1,27 @@
 console.log("JS file connected");
 
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
+
+
+
+/*function darkMode() {
+    var bg = document.body;
+
+    bg.classList.toggle("dark-mode");
 }
+
+const button = document.getElementById('dark-mode');
+        button.addEventListener('click', (event) => {
+            if (button.innerHTML === "Dark Mode") {
+                document.documentElement.style.setProperty('--text', '#000');
+                document.documentElement.style.setProperty('--bg', '#eeeeee');
+                button.innerHTML = "Light Mode";
+            } else {
+                document.documentElement.style.setProperty('--text', '#1e2939');
+                document.documentElement.style.setProperty('--bg', '#F1F9fc');
+                button.innerHTML = "Dark Mode";
+            }
+        });*/
+
 
 /*drag and drop function example below taken from 
 w3schools https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_draganddrop

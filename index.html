@@ -9,17 +9,78 @@
     </head>
 
     <body>
-        <div class="header-container">
-            <h1 class="header">MUSIC MIXER</h1>
-            <button class="button" onclick="myFunction()">APPEARANCE</button>
+        <div class="header">
+            <h1 id="header-text">MUSIC MIXER</h1>
+            <!--<button class="modebutton" id="dark-mode" onclick="darkMode()">APPEARANCE</button>-->
         </div>
-        <!-- display of beats on left side (circle maybe? something similar to 108 idea mixed with ocean) , drag and drop function on right side of page-->
 
-        <!--example of html dnd from js
-            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-            <br>
-            <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
-        -->
+        <div class="Container">
+            <div class="LeftDiv">
+                <div class="Beats">
+                </div>
+                <div class="Beats">
+                </div>
+                <div class="Beats">
+                </div>
+                <div class="Beats">
+                </div>
+                <div class="Beats">
+                </div>
+                <div class="Beats">
+                </div>
+            </div>
+
+            <div class="RightDiv">
+                <div class="DnDDiv">
+                    <div class="DragContainer">
+                        <div class="Pieces">
+                            <div class="Item"></div>
+                            <div class="DragButtons">
+                                <button class="button-89" role="button">Mute</button>
+                                <button class="button-89" role="button">Unmute</button>
+                                <button class="button-89" role="button">X</button>
+                            </div>
+                        </div>
+                        <div class="Pieces">
+                            <div class="Item"></div>
+                            <div class="DragButtons">
+                                <button class="button-89" role="button">Mute</button>
+                                <button class="button-89" role="button">Unmute</button>
+                                <button class="button-89" role="button">X</button>
+                            </div>
+                        </div>
+                        <div class="Pieces">
+                            <div class="Item"></div>
+                            <div class="DragButtons">
+                                <button class="button-89" role="button">Mute</button>
+                                <button class="button-89" role="button">Unmute</button>
+                                <button class="button-89" role="button">X</button>
+                            </div>
+                        </div>
+                        <div class="Pieces">
+                            <div class="Item"></div>
+                            <div class="DragButtons">
+                                <button class="button-89" role="button">Mute</button>
+                                <button class="button-89" role="button">Unmute</button>
+                                <button class="button-89" role="button">X</button>
+                            </div>
+                        </div>
+                        <div class="Pieces">
+                            <div class="Item"></div>
+                            <div class="DragButtons">
+                                <button class="button-89" role="button">Mute</button>
+                                <button class="button-89" role="button">Unmute</button>
+                                <button class="button-89" role="button">X</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="MiscDiv">
+                    <input type="range" class="VolumeSlider">
+                    <button class="Pause"> <i class="pauseicon"></i> </button>
+                </div> 
+            </div>
+
         <script src="js/main.js"></script>
     </body>
 
