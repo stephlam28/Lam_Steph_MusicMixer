@@ -6,6 +6,9 @@
         <title>Music Mixer</title>
         <link href="css/main.css" rel="stylesheet">
         <link href="css/grid.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -16,68 +19,94 @@
 
         <div class="Container">
             <div class="LeftDiv">
-                <div class="Beats">
+                <div data-path="0" class="Beats" draggable="true">
+                    <h5 style="margin-left:15px;"> Bass Guitar </h5>
+                    <audio data-path="0" src="./asset/sounds/Bass118bpm.wav"></audio>
                 </div>
-                <div class="Beats">
+                <div data-path="1" class="Beats" draggable="true">
+                    <h5 style="margin-left:15px;"> Cymbals </h5>
+                    <audio data-path="1" src="./asset/sounds/Beat120bpm.wav"></audio>
                 </div>
-                <div class="Beats">
+                <div data-path="2" class="Beats" draggable="true">
+                    <h5 style="margin-left:15px;"> Beat Tap </h5>
+                    <audio data-path="2" src="./asset/sounds/Beat125bpm.wav"></audio>
                 </div>
-                <div class="Beats">
+                <div data-path="3" class="Beats" draggable="true">
+                    <h5 style="margin-left:15px;"> Chac Chac </h5>
+                    <audio data-path="3" src="./asset/sounds/Perc129bpm.wav"></audio>
                 </div>
-                <div class="Beats">
+                <div data-path="4" class="Beats" draggable="true">
+                    <h5 style="margin-left:15px;"> Snare Drum </h5>
+                    <audio data-path="4" src="./asset/sounds/Perc132bpm.wav"></audio>
                 </div>
-                <div class="Beats">
+                <div data-path="5" class="Beats" draggable="true">
+                    <h5 style="margin-left:15px;"> Synth </h5>
+                    <audio data-path="5" src="./asset/sounds/Synth130bpm.wav"></audio>
                 </div>
             </div>
+
+            <!--
+            <audio data-path="0" src="./asset/sounds/Bass118bpm.wav"></audio>
+            <audio data-path="1" src="./asset/sounds/Beat120bpm.wav"></audio>
+            <audio data-path="2" src="./asset/sounds/Beat125bpm.wav"></audio>
+            <audio data-path="3" src="./asset/sounds/Perc129bpm.wav"></audio>
+            <audio data-path="4" src="./asset/sounds/Perc132bpm.wav"></audio>
+            <audio data-path="5" src="./asset/sounds/Synth130bpm.wav"></audio> -->
 
             <div class="RightDiv">
                 <div class="DnDDiv">
                     <div class="DragContainer">
+                        <button id="resetBut">Reset</button>
                         <div class="Pieces">
                             <div class="Item"></div>
                             <div class="DragButtons">
-                                <button class="button-89" role="button">Mute</button>
-                                <button class="button-89" role="button">Unmute</button>
-                                <button class="button-89" role="button">X</button>
+                                <button onclick="enableMute(0)" class="button-89 mute" role="button">Mute</button>
+                                <button onclick="disableMute(0)" class="button-89 unmute" role="button">Unmute</button>
                             </div>
                         </div>
                         <div class="Pieces">
                             <div class="Item"></div>
                             <div class="DragButtons">
-                                <button class="button-89" role="button">Mute</button>
-                                <button class="button-89" role="button">Unmute</button>
-                                <button class="button-89" role="button">X</button>
+                                <button onclick="enableMute(1)" class="button-89 mute" role="button">Mute</button>
+                                <button onclick="disableMute(1)" class="button-89 unmute" role="button">Unmute</button>
                             </div>
                         </div>
                         <div class="Pieces">
                             <div class="Item"></div>
                             <div class="DragButtons">
-                                <button class="button-89" role="button">Mute</button>
-                                <button class="button-89" role="button">Unmute</button>
-                                <button class="button-89" role="button">X</button>
+                                <button onclick="enableMute(2)" class="button-89 mute" role="button">Mute</button>
+                                <button onclick="disableMute(2)" class="button-89 unmute" role="button">Unmute</button>
                             </div>
                         </div>
                         <div class="Pieces">
                             <div class="Item"></div>
                             <div class="DragButtons">
-                                <button class="button-89" role="button">Mute</button>
-                                <button class="button-89" role="button">Unmute</button>
-                                <button class="button-89" role="button">X</button>
+                                <button onclick="enableMute(3)" class="button-89 mute" role="button">Mute</button>
+                                <button onclick="disableMute(3)" class="button-89 unmute" role="button">Unmute</button>
                             </div>
                         </div>
                         <div class="Pieces">
                             <div class="Item"></div>
                             <div class="DragButtons">
-                                <button class="button-89" role="button">Mute</button>
-                                <button class="button-89" role="button">Unmute</button>
-                                <button class="button-89" role="button">X</button>
+                                <button onclick="enableMute(4)" class="button-89 mute" role="button">Mute</button>
+                                <button onclick="disableMute(4)" class="button-89 unmute" role="button">Unmute</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="DotContainer">
+                    <span class="dot1" style="opacity: 1;"></span>
+                    <span class="dot2" style="opacity: 0.3;"></span>
+                    <span class="dot3" style="opacity: 0.3;"></span>
+                    <span class="dot4" style="opacity: 0.3;"></span>
+                    <span class="dot5" style="opacity: 0.3;"></span>
+                </div>
+
                 <div class="MiscDiv">
                     <input type="range" class="VolumeSlider">
-                    <button class="Pause"> <i class="pauseicon"></i> </button>
+                    <button onclick="playAudio()" class="Play"> <i class="playbutton"></i> </button>
+                    <button onclick="pauseAudio()" class="Pause"> <i class="pauseicon"></i> </button>
                 </div> 
             </div>
 
